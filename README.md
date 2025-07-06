@@ -8,7 +8,7 @@ Follow these steps to set up the project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/adrianhajdin/collaborative-editor.git
+   git clone https://github.com/ANNI69/DocSync.git
    cd collaborative-editor
    ```
 
