@@ -10,9 +10,15 @@
 /* ========================================== TAILWIND STYLES */
 @layer base {
   :root {
-    background: #09111f;
+    background: #141414;
     color: #fff;
+    font-family: var(--font-sans), sans-serif;
     margin: 0;
+  }
+  body {
+    background: #141414;
+    color: #fff;
+    font-family: var(--font-sans), sans-serif;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -22,36 +28,36 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: #09090a;
+    background: #1a1a1a;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #2e3d5b;
+    background: #262626;
     border-radius: 50px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #7878a3;
+    background: #1b1b1b;
   }
 }
 
 @layer utilities {
   .text-28-semibold {
-    @apply text-[28px] font-semibold;
+    @apply text-[28px] font-semibold text-white;
   }
   .text-10-regular {
-    @apply text-[10px] font-normal;
+    @apply text-[10px] font-normal text-white;
   }
 
   .gradient-blue {
-    @apply bg-gradient-to-t from-blue-500 to-blue-400;
+    @apply bg-gradient-to-t from-gray-800 to-gray-600;
   }
   .gradient-red {
     @apply bg-gradient-to-t from-red-500 to-red-400;
   }
 
   .shad-dialog {
-    @apply w-full max-w-[400px] rounded-xl border-none bg-doc bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
+    @apply w-full max-w-[400px] rounded-xl border-none bg-gray-800 bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
   }
 
   .shad-dialog button {
@@ -59,7 +65,7 @@
   }
 
   .shad-select {
-    @apply w-fit border-none bg-transparent text-blue-100 !important;
+    @apply w-fit border-none bg-transparent text-white !important;
   }
 
   .shad-select svg {
@@ -67,15 +73,15 @@
   }
 
   .shad-select-item {
-    @apply cursor-pointer bg-dark-200 text-blue-100 focus:bg-dark-300 hover:bg-dark-300 focus:text-blue-100 !important;
+    @apply cursor-pointer bg-gray-700 text-white focus:bg-gray-800 hover:bg-gray-800 focus:text-white !important;
   }
 
   .shad-popover {
-    @apply w-[460px] border-none bg-dark-200 shadow-lg !important;
+    @apply w-[460px] border-none bg-gray-800 shadow-lg !important;
   }
 
   .floating-toolbar {
-    @apply flex w-full min-w-max items-center justify-center gap-2 rounded-lg bg-dark-350 p-1.5 shadow-xl;
+    @apply flex w-full min-w-max items-center justify-center gap-2 rounded-lg bg-gray-700 p-1.5 shadow-xl;
   }
 
   .floating-toolbar-btn {
@@ -83,7 +89,7 @@
   }
 
   .toolbar-wrapper {
-    @apply z-50 custom-scrollbar w-screen overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm;
+    @apply z-50 custom-scrollbar w-screen overflow-auto border-y border-gray-700 bg-gray-900 pl-3 pr-4 shadow-sm;
   }
 
   .editor-wrapper {
@@ -91,7 +97,7 @@
   }
 
   .header {
-    @apply min-h-[92px] min-w-full flex-nowrap bg-dark-100 flex w-full items-center justify-between gap-2 px-4;
+    @apply min-h-[92px] min-w-full flex-nowrap bg-gray-900 flex w-full items-center justify-between gap-2 px-4;
   }
 
   .document-list-container {
@@ -103,23 +109,23 @@
   }
 
   .document-list-item {
-    @apply flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl;
+    @apply flex items-center justify-between gap-4 rounded-lg bg-gray-800 bg-cover p-5 shadow-xl;
   }
 
   .document-list-empty {
-    @apply flex w-full max-w-[730px] flex-col items-center justify-center gap-5 rounded-lg bg-dark-200 px-10 py-8;
+    @apply flex w-full max-w-[730px] flex-col items-center justify-center gap-5 rounded-lg bg-gray-800 px-10 py-8;
   }
 
   .document-title-input {
-    @apply min-w-[78px] flex-1 border-none bg-transparent px-0 text-left text-base font-semibold leading-[24px] focus-visible:ring-0 focus-visible:ring-offset-0 disabled:text-black sm:text-xl md:text-center !important;
+    @apply min-w-[78px] flex-1 border-none bg-transparent px-0 text-left text-base font-semibold leading-[24px] text-white focus-visible:ring-0 focus-visible:ring-offset-0 disabled:text-gray-400 sm:text-xl md:text-center !important;
   }
 
   .document-title {
-    @apply line-clamp-1 border-dark-400 text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl;
+    @apply line-clamp-1 border-gray-700 text-base font-semibold leading-[24px] text-white sm:pl-0 sm:text-xl;
   }
 
   .view-only-tag {
-    @apply rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-blue-100/50;
+    @apply rounded-md bg-gray-700/50 px-2 py-0.5 text-xs text-gray-400;
   }
 
   .collaborators-list {
@@ -127,7 +133,7 @@
   }
 
   .share-input {
-    @apply h-11 flex-1 border-none bg-dark-400 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply h-11 flex-1 border-none bg-gray-700 text-white focus-visible:ring-0 focus-visible:ring-offset-0 !important;
   }
 
   .remove-btn {
@@ -139,11 +145,11 @@
   }
 
   .comment-composer {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px];
+    @apply w-full max-w-[800px] border border-gray-700 bg-gray-800 shadow-sm lg:w-[350px];
   }
 
   .comment-thread {
-    @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px] transition-all;
+    @apply w-full max-w-[800px] border border-gray-700 bg-gray-800 shadow-sm lg:w-[350px] transition-all;
   }
 
   .loader {
@@ -152,12 +158,12 @@
 
   /* ======================== Auth Pages */
   .auth-page {
-    @apply flex h-screen w-full flex-col items-center justify-center gap-10;
+    @apply flex h-screen w-full flex-col items-center justify-center gap-10 bg-gray-900 text-white;
   }
 
   /* ======================== Home Page */
   .home-container {
-    @apply relative flex min-h-screen w-full flex-col items-center gap-5 sm:gap-10;
+    @apply relative flex min-h-screen w-full flex-col items-center gap-5 sm:gap-10 bg-gray-900 text-white;
   }
 
   .document-ul {
@@ -166,52 +172,13 @@
 
   /* ======================== CollaborativeRoom */
   .collaborative-room {
-    @apply flex size-full max-h-screen flex-1 flex-col items-center overflow-hidden;
+    @apply flex size-full max-h-screen flex-1 flex-col items-center overflow-hidden bg-gray-900 text-white;
   }
-}
-
-/* ======================== Clerk Override */
-.cl-avatarBox {
-  width: 36px;
-  height: 36px;
-}
-
-.cl-userButtonTrigger {
-  height: fit-content !important;
-}
-
-.cl-cardBox,
-.cl-signIn-start,
-.cl-signUp-start,
-.cl-footer {
-  background: #060d18;
-  box-shadow: none;
-  padding: 20px;
-}
-
-.cl-socialButtonsBlockButton,
-.cl-socialButtonsBlockButton:hover {
-  height: 40px;
-  background-color: #3371ff;
-  color: #fff;
-}
-
-.cl-internal-2gzuzc {
-  filter: brightness(1000%);
-}
-
-.cl-logoBox {
-  height: 64px;
-}
-
-.cl-userButtonPopoverMain,
-.cl-userButtonPopoverFooter {
-  background: #0b1527;
 }
 
 /* ======================== Liveblocks Override */
 .lb-root {
-  --lb-accent-subtle: #0b1527;
+  --lb-accent-subtle: #080808;
   --lb-radius: 0px;
   --lb-dynamic-background: #1b2840;
 }
@@ -220,8 +187,10 @@
 .lb-thread-comments,
 .lb-composer,
 .lb-comment-reaction {
-  background-color: #0f1c34;
+  background-color: #000000;
   color: #fff;
+  border-radius: 5;
+
 }
 
 .lb-button {
@@ -274,10 +243,10 @@
 }
 
 .lb-comment-content {
-  background: #0b1527;
+  background: #000000;
   margin-top: 16px;
   padding: 12px;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 14px;
 }
 
@@ -311,5 +280,7 @@
 }
 
 .lb-elevation {
-  background: #0f1c34;
+  background: #000000;
+  border-radius: 5;
+
 }

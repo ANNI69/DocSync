@@ -13,8 +13,8 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'LiveDocs',
-  description: 'Your go-to collaborative editor',
+  title: 'DocSync',
+  description: "Made For You, By One of You",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,10 +22,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <ClerkProvider
       appearance={{
         baseTheme: dark,
-        variables: { 
-          colorPrimary: "#3371FF" ,
-          fontSize: '16px'
-        },
+        layout:{
+          
+        }
       }}
     >
       <html lang="en" suppressHydrationWarning>

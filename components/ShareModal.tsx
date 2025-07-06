@@ -45,7 +45,7 @@ const ShareModal = ({ roomId, collaborators, creatorId, currentUserType }: Share
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
-        <Button className="gradient-blue flex h-9 gap-1 px-4" disabled={currentUserType !== 'editor'}>
+        <Button className="bg-black text-white rounded-lg px-5 py-2 shadow-none hover:bg-neutral-900 focus:ring-2 focus:ring-neutral-700 transition-colors border-none" disabled={currentUserType !== 'editor'}>
           <Image
             src="/assets/icons/share.svg"
             alt="share"
